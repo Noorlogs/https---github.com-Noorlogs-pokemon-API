@@ -44,9 +44,9 @@ npm install
 5.Start the server:
 npm start
 
-Usage
+##Usage
 
-User APIs
+##User APIs
 
 POST /api/signup: Create a new user.
 POST /api/login: User login.
@@ -55,7 +55,7 @@ GET /api/all-users: Get all users.
 PUT /api/update-user: Update user profile.
 DELETE /api/delete-user: Delete user profile.
 
-Pokemon APIs
+##Pokemon APIs
 
 POST /api/add-pokemon: Add a new pokemon.
 GET /api/all-pokemon: Get all pokemons.
@@ -63,7 +63,7 @@ GET /api/pokemon-id: Get pokemon by ID.
 PUT /api/update-pokemon: Update pokemon details.
 DELETE /api/delete-pokemon: Delete a pokemon.
 
-Type APIs
+##Type APIs
 
 POST /api/add-pokemon-type: Add a new pokemon type.
 GET /api/all-pokemon-type: Get all pokemon types.
@@ -71,7 +71,7 @@ GET /api/pokemon-type-by-id: Get pokemon type by ID.
 PUT /api/update-pokemon-type: Update pokemon type.
 DELETE /api/delete-pokemon-type: Delete a pokemon type.
 
-Character APIs
+##Character APIs
 
 POST /api/add-character: Add a new character.
 GET /api/all-character: Get all characters.
@@ -80,6 +80,6 @@ PUT /api/update-character: Update character details.
 DELETE /api/delete-character: Delete a character.
 
 
-Contributing
+##Contributing
 Contributions are welcome! If you find any issues or want to add enhancements, feel free to create a pull request.
-# [GitHub Repository](https://github.com/your-username/your-repo)
+# [GitHub Repository](https://github.com/Noorlogs/pokemon-API)
