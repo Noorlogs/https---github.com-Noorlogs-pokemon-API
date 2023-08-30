@@ -11,11 +11,11 @@ const {
 } = require('./controller');
 
 router.post('/signup', NewUser);
-router.post('/login', loginUser); //YE BANANI HAI ABHI
+router.post('/login', loginUser); //nh chal rahi
 
 router.get('/get-user-id', getUserID);
 // router.get('/get-user-email', getUserEmail); //YE NH CHAL RAHI SAHI
-router.get('/get-all-users', getAllUsers);
+router.get('/all-users', getAllUsers);
 
 router.put('/update-user', updateProfile);
 router.delete('/delete-user', deleteProfile);

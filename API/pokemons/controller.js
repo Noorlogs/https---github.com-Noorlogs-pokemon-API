@@ -89,10 +89,12 @@ const updatePokemon = async (req, res) => {
         await connect(process.env.MONGO_URL)
 
         const categoryid = await newPokemonSchema.findOneAndUpdate
+
             (filter, update, { new: true })
 
         res.json({
-            message: "Updated Successfully!"
+            message: "Updated Successfully!",
+            categoryid
         })
 
     }

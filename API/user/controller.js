@@ -3,13 +3,12 @@ const newUserSchema = require('./schema');
 const { hash, compare } = require('bcryptjs')
 require('dotenv').config()
 
-
 const loginUser = async (req, res) => {
     const { email, password } = req.body
 
     try {
         await connect(process.env.MONGO_URL)
-        const checkUserExist = await newUserSchema.findOne({ email: email })
+        const checkUserExist = await newUserSchema.findOne({ _id })
         if (!checkUserExist) {
             res.status(404).json({
                 message: "User Not Found!"
@@ -25,7 +24,8 @@ const loginUser = async (req, res) => {
             })
         }
 
-    } catch (error) {
+    }
+    catch (error) {
         res.json({
             message: error
         })
@@ -51,8 +51,10 @@ const NewUser = async (req, res) => {
         }
         else {
             await newUserSchema.create({ username, password: await hash(password, 12), email })
+            const allUsers = await newUserSchema.find()
             res.status(201).json({
-                message: "New User Has Been Created To DB"
+                message: "New User Has Been Created To DB",
+                allUsers
             })
         }
     }
@@ -131,11 +133,12 @@ const updateProfile = async (req, res) => {
         // Save the user to the database
         await connect(process.env.MONGO_URL)
 
-        const categoryid = await newUserSchema.findOneAndUpdate
+        const user_id = await newUserSchema.findOneAndUpdate
             (filter, update, { new: true })
 
         res.json({
-            message: "Updated Successfully!"
+            message: "Updated Successfully!",
+            user_id
         })
 
     }
